@@ -5,8 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>starter</groupId>
-    <artifactId>org.apache.pulsar.functions.api</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <artifactId>pulsarfunctions</artifactId>
 
     <properties>
         <pulsar.version>2.0.0-incubator-SNAPSHOT</pulsar.version>

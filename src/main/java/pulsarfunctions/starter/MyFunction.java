@@ -1,4 +1,4 @@
-package org.apache.pulsar.functions.api.starter;
+package pulsarfunctions.starter;
 
 import java.util.function.Function;
 
