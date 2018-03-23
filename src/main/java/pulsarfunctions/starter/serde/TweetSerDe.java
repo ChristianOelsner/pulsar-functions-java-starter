@@ -6,11 +6,13 @@ public class TweetSerDe implements SerDe<Tweet> {
     @Override
     public Tweet deserialize(byte[] input) {
         String username = new String(input);
-        return new Tweet();
+        Tweet t = new Tweet();
+        t.setUsername(username);
+        return t;
     }
 
     @Override
     public byte[] serialize(Tweet input) {
-        return new byte[]{};
+        return input.getUsername().getBytes();
     }
 }

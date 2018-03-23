@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 public class MyFunctionWithCustomSerDe implements Function<Tweet, Void> {
     @Override
-    public void apply(Tweet input) {
+    public Void apply(Tweet input) {
         return null;
     }
 }

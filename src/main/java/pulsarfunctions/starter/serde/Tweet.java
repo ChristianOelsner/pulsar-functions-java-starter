@@ -1,7 +1,7 @@
 package pulsarfunctions.starter.serde;
 
 public final class Tweet {
-    private final String username;
+    private String username;
 
     public Tweet() {
     }
@@ -10,7 +10,7 @@ public final class Tweet {
         return username;
     }
 
-    public void setUsername() {
+    public void setUsername(String username) {
         this.username = username;
     }
 }
