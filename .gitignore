@@ -3,4 +3,7 @@
 .idea/
 
 # Java artifacts
+.classpath
+.project
+.settings/
 target/

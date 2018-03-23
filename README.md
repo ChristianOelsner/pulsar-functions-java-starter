@@ -1,3 +1,7 @@
 # Pulsar Functions Java Starter
 
-TODO
+To package the functions as a single "fat" JAR:
+
+```bash
+$ mvn package
+```
