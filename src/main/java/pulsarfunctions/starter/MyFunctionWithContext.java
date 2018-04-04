@@ -28,6 +28,7 @@ public class MyFunctionWithContext implements Function<String, String> {
         LOG.info("  Function tenant: {}", functionTenant);
         LOG.info("  Function namespace: {}", functionNamespace);
         LOG.info("  Function name: {}", functionName);
+        LOG.info("  Fully qualified function name (aka FQFN), in tenant/namespace/name form: {}", fullyQualifiedFunctionName);
         LOG.info("  Function ID: {}", functionId);
         LOG.info("  Function instance ID: {}", instanceId);
         LOG.info("  Function version: {}", functionVersion);
