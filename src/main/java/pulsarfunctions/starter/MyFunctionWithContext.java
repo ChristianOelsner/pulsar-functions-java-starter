@@ -22,6 +22,7 @@ public class MyFunctionWithContext implements Function<String, String> {
         String outputTopic = context.getOutputTopic();
         String messageId = new String(context.getMessageId());
         String messageTopic = context.getTopicName();
+        String userValue = context.getUserConfigValueOrDefault("key1", "No value specified");
 
         LOG.info("Function info\n=============");
         LOG.info("  Function tenant: {}", functionTenant);
@@ -34,6 +35,7 @@ public class MyFunctionWithContext implements Function<String, String> {
         LOG.info("  Function output topic: {}", outputTopic);
         LOG.info("  Message ID: {}", messageId);
         LOG.info("  Message produced on topic: {}", messageTopic);
+        LOG.info("  User config for the key key1: {}", userValue);
 
         String counterKey = String.format("%s-invocations", fullyQualifiedFunctionName);
         context.incrCounter(counterKey, 1);
