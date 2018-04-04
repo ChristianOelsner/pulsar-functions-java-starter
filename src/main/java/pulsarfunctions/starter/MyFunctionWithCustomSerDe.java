@@ -4,9 +4,10 @@ import pulsarfunctions.starter.serde.Tweet;
 
 import java.util.function.Function;
 
-public class MyFunctionWithCustomSerDe implements Function<Tweet, Void> {
+public class MyFunctionWithCustomSerDe implements Function<Tweet, String> {
     @Override
-    public Void apply(Tweet input) {
-        return null;
+    public String apply(Tweet input) {
+        String username = input.getUsername();
+        return username;
     }
 }

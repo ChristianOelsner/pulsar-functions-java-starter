@@ -6,7 +6,7 @@ public final class Tweet {
     Tweet() {
     }
 
-    String getUsername() {
+    public String getUsername() {
         return username;
     }
 
