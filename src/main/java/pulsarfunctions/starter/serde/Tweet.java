@@ -3,14 +3,14 @@ package pulsarfunctions.starter.serde;
 public final class Tweet {
     private String username;
 
-    public Tweet() {
+    Tweet() {
     }
 
-    public String getUsername() {
+    String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    void setUsername(String username) {
         this.username = username;
     }
 }
