@@ -9,10 +9,10 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-public class TweetSerDe implements SerDe<Tweet> {
+public class TweetKryoSerDe implements SerDe<Tweet> {
     private final Kryo kryo;
 
-    public TweetSerDe() {
+    public TweetKryoSerDe() {
         kryo = new Kryo();
         kryo.register(Tweet.class, 1);
     }
