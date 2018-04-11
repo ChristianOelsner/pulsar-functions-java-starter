@@ -4,34 +4,21 @@ import org.apache.pulsar.functions.api.Context;
 import org.apache.pulsar.functions.api.Function;
 import org.slf4j.Logger;
 
-import java.util.Map;
-
 public class LogFunction implements Function<String, Void> {
+    private boolean stringIsTooLong(String s, int max) {
+        return (s.length() > max);
+    }
+
     @Override
     public Void process(String input, Context context) {
         Logger LOG = context.getLogger();
+        int maxLength = Integer.parseInt(context.getUserConfigValueOrDefault("max-length", "25"));
 
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(String.format("Message received with ID %s and payload %s\n",
-                new String(context.getMessageId()), input));
-        stringBuilder.append(String.format("  Fully qualified function name (tenant/namespace/name): %s/%s/%s\n",
-                context.getTenant(),
-                context.getNamespace(),
-                context.getFunctionName()));
-        stringBuilder.append(String.format("  Function ID: %s. Function version: %s.",
-                context.getFunctionId(),
-                context.getFunctionVersion()));
-
-        Map<String, String> userConfigs = context.getUserConfigMap();
-
-        if (userConfigs.size() > 0) {
-            stringBuilder.append("  User configs:");
-            userConfigs.forEach((k, v) -> {
-                stringBuilder.append(String.format("    %s: %s", k, v));
-            });
+        if (stringIsTooLong(input, maxLength)) {
+            LOG.info("The incoming string \"{}\" was within the allowable limit of {}", input, maxLength);
+        } else {
+            LOG.error("The incoming string \"{}\" is too long! Exceeds the limit of {}", input, maxLength);
         }
-
-        LOG.info(stringBuilder.toString());
 
         return null;
     }
