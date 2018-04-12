@@ -1,4 +1,4 @@
-package pulsarfunctions.starter;
+package pulsarfunctions.starter.sdk;
 
 import org.apache.pulsar.functions.api.Context;
 import org.apache.pulsar.functions.api.Function;

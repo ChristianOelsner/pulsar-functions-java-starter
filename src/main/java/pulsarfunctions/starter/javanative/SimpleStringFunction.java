@@ -1,4 +1,4 @@
-package pulsarfunctions.starter;
+package pulsarfunctions.starter.javanative;
 
 import java.util.function.Function;
 

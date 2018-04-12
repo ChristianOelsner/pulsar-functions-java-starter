@@ -23,7 +23,7 @@ $ cd /path/to/incubator-pulsar
 # Example create command
 $ bin/pulsar-admin functions create \
   --jar $PULSAR_FUNCTIONS_JAR \
-  --className pulsarfunctions.starter.SimpleStringFunction \
+  --className pulsarfunctions.starter.javanative.SimpleStringFunction \
   --inputs persistent://sample/standalone/ns1/in \
   --output persistent://sample/standalone/ns1/out \
   --fqfn sample/ns1/simple-string

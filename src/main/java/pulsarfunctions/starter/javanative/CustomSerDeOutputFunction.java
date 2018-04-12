@@ -1,12 +1,12 @@
-package pulsarfunctions.starter;
+package pulsarfunctions.starter.javanative;
 
-import org.apache.pulsar.functions.api.Context;
-import org.apache.pulsar.functions.api.Function;
 import pulsarfunctions.starter.serde.Tweet;
+
+import java.util.function.Function;
 
 public class CustomSerDeOutputFunction implements Function<String, Tweet> {
     @Override
-    public Tweet process(String input, Context context) {
+    public Tweet apply(String input) {
         Tweet tweet = new Tweet();
         tweet.setUsername(input);
         return tweet;
