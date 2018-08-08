@@ -24,9 +24,8 @@ $ cd /path/to/incubator-pulsar
 $ bin/pulsar-admin functions create \
   --jar $PULSAR_FUNCTIONS_JAR \
   --className pulsarfunctions.starter.javanative.SimpleStringFunction \
-  --inputs persistent://sample/standalone/ns1/in \
-  --output persistent://sample/standalone/ns1/out \
-  --fqfn sample/ns1/simple-string
+  --inputs input_topic \
+  --output output_topic
 ```
 
 ## Included functions
