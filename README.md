@@ -1,6 +1,6 @@
 # Pulsar Functions Java Starter
 
-This repo houses some example [Pulsar Functions](http://pulsar.incubator.apache.org/docs/latest/functions/overview/) written in Java. These functions can all be run either in [local mode](http://pulsar.incubator.apache.org/docs/latest/functions/overview#local-run) or in [cluster mode](http://pulsar.incubator.apache.org/docs/latest/functions/overview#cluster-mode).
+This repo houses some example [Pulsar Functions](http://pulsar.incubator.apache.org/docs/latest/functions/overview/) written in Java. These functions can all be run either in [local mode](http://pulsar.incubator.apache.org/docs/latest/functions/overview#local-run) or in [cluster mode](http://pulsar.incubator.apache.org/docs/latest/functions/overview#cluster-run).
 
 ## Requirements
 
