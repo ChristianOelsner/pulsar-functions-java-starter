@@ -12,7 +12,7 @@ public class LogFunction implements Function<String, Void> {
     @Override
     public Void process(String input, Context context) {
         Logger LOG = context.getLogger();
-        int maxLength = Integer.parseInt(context.getUserConfigValueOrDefault("max-length", "25"));
+        int maxLength = Integer.parseInt((String)context.getUserConfigValueOrDefault("max-length", "25"));
 
         if (stringIsTooLong(input, maxLength)) {
             LOG.info("The incoming string \"{}\" was within the allowable limit of {}", input, maxLength);

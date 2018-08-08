@@ -8,7 +8,7 @@ public class UserConfigFunction implements Function<String, String> {
     @Override
     public String process(String input, Context context) {
         Logger LOG = context.getLogger();
-        String secretWord = context.getUserConfigValueOrDefault("secret", "Open Sesame");
+        String secretWord = (String)context.getUserConfigValueOrDefault("secret", "Open Sesame");
 
         context.getUserConfigMap().forEach((key, value) -> {
             LOG.info("{\"{}\": \"{}\"}", key, value);
